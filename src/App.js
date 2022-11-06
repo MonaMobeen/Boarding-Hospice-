@@ -1,5 +1,12 @@
-import React from "react";
+import React, { Routes } from "react-router-dom";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
@@ -8,18 +15,17 @@ import Error from "./pages/Error";
 
 import Navbar from "./components/Navbar";
 
-import { Switch, Route } from "react-router-dom";
-
+ 
 function App() {
   return (
     <>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home} />
         <Route exact path="/rooms/" component={Rooms} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
         <Route component={Error} />
-      </Switch>
+      </Routes>
     </>
   );
 }

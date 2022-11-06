@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react";
 import defaultImg from "../images/room-1.jpeg";
 import PropTypes from "prop-types";
 import { memo } from "react";
